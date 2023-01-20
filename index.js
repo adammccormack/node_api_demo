@@ -25,13 +25,13 @@ app.post("/dogs", (req, res) => {
   res.json({ message: "ok" });
 });
 
-app.put("/dogs", (req, res) => {
+app.put("/dogs/:id", (req, res) => {
   console.log(req.params.id);
   console.log(req.body);
   res.json({ message: `updating dog ${req.params.id}` });
 });
 
-app.delete("/dogs", (req, res) => {
+app.delete("/dogs/:id", (req, res) => {
   console.log(req.params.id);
   res.json({ message: `deleting dog ${req.params.id}` });
 });
