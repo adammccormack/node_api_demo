@@ -1,8 +1,9 @@
 const express = require("express");
 var bodyParser = require("body-parser");
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
+const mongoose = require("mongoose");
 
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const port = 4567;
